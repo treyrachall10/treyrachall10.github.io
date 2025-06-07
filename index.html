@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #1e1e1e;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+        nav ul li a {
+            color: #f4a259;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffa94d;
+        }
+        h1.page-title {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 2.75rem;
+            color: #f4a259;
+        }
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .about-box, .contact-box {
+            background-color: #1e1e1e;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+        .about-box img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f4a259;
+            margin-bottom: 1.5rem;
+        }
+        .projects-box {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .project-item {
+            width: 320px;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #2b2b2b;
+            position: relative;
+            animation: glowPulse 2s infinite alternate;
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        .project-item:hover {
+            box-shadow: 0 0 40px 15px #ffa94d;
+            transform: translateY(-10px) scale(1.05);
+        }
+        .project-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-item a {
+            display: block;
+            text-align: center;
+            padding: 1rem;
+            color: #f4a259;
+            text-decoration: none;
+        }
+        .project-item a:hover {
+            color: #ffa94d;
+        }
+        @keyframes glowPulse {
+            0% {
+                box-shadow: 0 0 15px 3px #f4a259;
+            }
+            100% {
+                box-shadow: 0 0 25px 8px #f4a259;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <h1 class="page-title">About Me</h1>
+        <div class="about-box">
+            <img src="/Users/treyrachall/Desktop/idpicture.jpg" alt="About Me Photo">
+            <p>Hi! I'm Trey Rachall, a Computer Science student in Texas State University's Class of 2027.</p>
+            <p></p>
+            <p>As an undergraduate I am currently working on projects that consist of creating software and AI that pertain to my hobbies such as Jiu Jitsu, mixed martial arts, and gaming.
+                This summer, I am participating at Clarkson University in New York as part of the NSF Sensor Design and Implementation Pipline REU, where I am working to develop an application that utilizes sensors to track humans eye movement using the Meta Quest Pro.
+            </p>
+            <p></p>
+            <p>This past semester, I developed a project where I trained an AI model to detect and classify hand gestures. The program utilized Roku's official API, enabling users to control their TV using only hand movements.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h1 class="page-title">Projects</h1>
+        <div class="projects-box">
+            <div class="project-item">
+                <a href="https://github.com/treyrachall10/Hand-TV-Controller" target="_blank" rel="noopener noreferrer">
+                    <img src="/Users/treyrachall/Desktop/TvProjectThumbnail.png" alt="AI TV Controller">
+                    AI TV Controller
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h1 class="page-title">Contact Me</h1>
+        <div class="contact-box">
+            <p>If you'd like to get in touch, feel free to reach out to me via email.</p>
+            <a href="mailto:mathew.rachall@gmail.com" style="color: #f4a259;">mathew.rachall@gmail.com</a>
+        </div>
+    </section>
+</body>
+</html>
